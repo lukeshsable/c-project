@@ -128,37 +128,38 @@
 //	return 0;
 //}
 
-#include<stdio.h>
-enum color
-{
-    RED = 0,
-    GREEN = 1,
-    BLUE = 2,
-};
-int main()
-{
-    enum color my_color = RED;
-    enum color my_color1 = 0;
-
-    if (my_color1 == RED)
-    {
-        printf("The color is red.\n");
-    }
-       else if (my_color1 == BLUE)
-    {
-        printf("The color is blue.\n");
-    }
-    else if (my_color1 == GREEN)
-    {
-        printf("The color is green.\n");
-    }
-
-    else
-    {
-        printf("Invalid color!\n");
-    }
-    return 0;
-}
+//#include<stdio.h>
+//enum color
+//{
+//    RED = 0,
+//    GREEN = 1,
+//    BLUE = 2,
+//};
+//int main()
+//{
+//    enum color my_color = RED;
+//    enum color my_color1 = 0;
+//
+//    if (my_color1 == RED)
+//    {
+//        printf("The color is red.\n");
+//    }
+//       else if (my_color1 == BLUE)
+//    {
+//        printf("The color is blue.\n");
+//    }
+//    else if (my_color1 == GREEN)
+//    {
+//        printf("The color is green.\n");
+//    }
+//
+//    else
+//    {
+//        printf("Invalid color!\n");
+//    }
+//    return 0;
+//}
+//==============================================================================================================================================================
 
 
 

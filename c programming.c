@@ -216,6 +216,7 @@
 //     float n,i;
 //     printf(" enter any number ::");
 //     scanf("%f",&n);
+//
 //     for(i=0.001; i*i<n; i=i+0.001);
 //
 //      printf("square root of %f is %f" ,n,i);
@@ -353,14 +354,14 @@
 //      return 0;
 //  }
 //==========================================================================================================================================================
-/// write a program to fins max from three numbers without using third variable
+/// write a program to find max from three numbers without using third variable
 //   #include<stdio.h>
 //    int main ()
 //{
 //    int n1,n2,n3,max,t;
 //    printf("enter the three numbers ::");
 //    scanf("%d %d %d",&n1,&n2,&n3);
-//    max=(n1>n2)?(n1>n3 ? n1>n3) : (n2>n3?n2 n3);
+//    max=(n1>n2)?(n1>n3 ? n1:n3) : (n2>n3)? n2:n3;
 //    printf("\n max is %d",max);
 //    return 0;
 //}
@@ -388,7 +389,7 @@
 //        {
 //              printf("\n number is nigative");
 //        }
-//        else
+//    }  else
 //          {
 //              if(opt==2)
 //               {
@@ -466,7 +467,7 @@
 //    int a,b,c,max;
 //    printf("enter the two numbers::");
 //    scanf("%d %d %d",&a,&b,&c);
-//    max=(a>b) ? (a>c ? a:c ):(b>c) ? (b) :(c);
+//    max=(a>b) ? (a>c ? a:c ):(b>c) ? b :c;
 //    printf("\n max is %d",max);
 //
 //return 0;
@@ -501,7 +502,7 @@
 
 //#include<stdio.h>
 //int main ()
-///{
+//{
 //    char ch;
 //    printf(" enter any character::");
 //    scanf("%c",&ch);
@@ -552,8 +553,8 @@
 //===============================================================================================================================================================================
 /// Write a C program to check whether a number is negative, positive or zero.
 
-//#include<stdio.h>
-//int main ()
+// #include<stdio.h>
+//  int main ()
 //{
 //    int n;
 //    printf(" enter any number ::");
@@ -615,7 +616,7 @@
 //  printf("enter any number::");
 //  scanf("%d",&n);
 //
-//  for(int i=1;i<=10;i+=1)
+//    for(int i=1;i<=10;i+=1)
 //  {
 //      printf("\n %d",n*i);
 //  }
@@ -765,7 +766,7 @@
 //  if(ch=='a'||ch=='i'||ch=='o'||ch=='u'||ch=='e')
 //        printf("\n character is vowel");
 //  else
-//    printf("\n character is not alphabet");
+//       printf("\n character is consonant");
 //  return 0;
 //}
 //==============================================================================================================================================================
@@ -780,14 +781,15 @@
 //    if(ch>='A' && ch<='Z'|| ch>='a' && ch<='z')
 //    {
 //        printf("\n entered character is alphabet");
-//    }  else{
+//    }  else
+//       {
 //
 //     if(ch>='0' && ch<= '9')
 //        printf("\n entered character is digit");
 //     else
 //
 //        printf("\n special character");
-//    }
+//       }
 //}
 //==============================================================================================================================================================
 /// Write a C program to check whether a character is uppercase or lowercase alphabet.
@@ -797,12 +799,15 @@
 //    char ch;
 //    printf("enter any character to check whether is UP case or LW case ::");
 //    scanf("\t %c",&ch);
+
 //    if(ch>='A' && ch<='Z')
 //    printf("\n entered character is upper case");
 //    else
+
 //    if(ch>='a' && ch<='z')
 //    printf("\n entered character is lower case");
 //      else
+
 //        printf("\n invalid character !!!!!!!");
 //      return 0;
 //}
@@ -811,11 +816,37 @@
 //#include<stdio.h>
 //int main ()
 //{
-//    int weeks,days;
-//    printf("\n enter the number of weeks::");
-//    scanf("%d",&weeks);
-//    days=weeks*7;
-//    printf("days ::%d",days);
+//    int wn,days;
+//    printf("\n enter the number of week number::");
+//    scanf("%d",&wn);
+//    if(wn==0)
+//    {
+//        printf("\n SUNDAY");
+//    }
+//    if(wn==1)
+//    {
+//        printf("\n MONDAY");
+//    }
+//    if(wn==2)
+//    {
+//        printf("\n TUESDAY");
+//    }
+//    if(wn==3)
+//    {
+//        printf("\n WEDNSDAY");
+//    }
+//    if(wn==4)
+//    {
+//        printf("\n THURSDAY");
+//    }
+//    if(wn==5)
+//    {
+//        printf("\n FRIDAY");
+//    }
+//    if(wn==6)
+//    {
+//        printf("\n SATURDAY");
+//    }
 //    return 0;
 //}
 //==============================================================================================================================================================
@@ -823,12 +854,22 @@
 //#include<stdio.h>
 //int main()
 //{
-//    int months,days;
-//    printf("enter the months ::");
-//    scanf("%d",&months);
-//
-//    days=months*30;
-//    printf("\n days are %d",days);
+//    int month;
+//    printf("enter the month ::");
+//    scanf("%d",&month);
+//    if((month == 1 || 3 || 5 || 7 || 8 || 10 || 12) && (month<13) )
+//    {
+//        printf("\n 31 DAYS");
+//    }else if((month== 4 || 6 || 9 || 11) && (month <13))
+//    {
+//        printf("\n 30 DAYS");
+//    }else if((month==2) && (month<13))
+//    {
+//        printf("\n 29 DAYS");
+//    }else
+//    {
+//      printf("\n INVALID MONTH");
+//    }
 //    return 0;
 //}
 //==============================================================================================================================================================
@@ -930,7 +971,7 @@
 //    {
 //        if(i%2==0)
 //        ecount++;
-//        else
+//    else
 //        ocount++;
 //    }
 //    printf("\n even count is %d",ecount);
@@ -950,14 +991,14 @@
 //    for( ;n!=0;n=n/10 )
 //    {
 //      rem=n%10;
-//    if(rem<min)
-//    {
+//       if(rem<min)
+//      {
 //     min=rem;
 //     if(min%2==0)
 //        emin=min;
 //     else
 //        omin=min;
-//    }
+//      }
 //    }
 //    printf("\n even min is %d",emin);
 //    printf("\n odd min is %d",omin);
@@ -981,7 +1022,6 @@
 //    rupese=amt%n;
 //    printf("\n rupese are %d",rupese);
 //    return 0;
-//
 //}
 //==============================================================================================================================================================
 ///  Write a C program to input angles of a triangle and check whether triangle is valid or not
@@ -1051,7 +1091,7 @@
 //    scanf("%d %d",&sp,&cp);
 //    if(sp>cp)
 //        printf("\n profit :: %d",sp-cp);
-//     else
+//    else
 //            printf("\n loss :: %d",cp-sp);
 //return 0;
 //}
@@ -1181,7 +1221,6 @@
 //  }
 //return 0;
 //
-//
 //}
 //==============================================================================================================================================================
 /// Write a C program to print all natural numbers in reverse (from n to 1)
@@ -1227,7 +1266,6 @@
 //    printf("\n  %d",i);
 //}
 //    return 0;
-//
 //}
 //==============================================================================================================================================================
 /// Write a C program to print all odd number between 1 to 100
@@ -1306,7 +1344,7 @@
 //}
 
 //==============================================================================================================================================================
-
+/// WAP tp generate maximum even digits and maximum odd digits from entered number
 //#include<stdio.h>
 //   int main ()
 //{
@@ -1341,37 +1379,2111 @@
 //}
 //==============================================================================================================================================================
 ///WAP to Find Missing digits in a number entered through keyboard.    e.g.  no: 15967	=  Missing digits: 0, 2, 3, 4, 8
-#include<stdio.h>
-int main ()
-{
-    int n,rem;
-    printf(" enter the number \t");
-    scanf("%d",&n);
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,rem;
+//    printf(" enter the number \t");
+//    scanf("%d",&n);
+//
+//    for(;n!=0;)
+//  {
+//       for(int i=n;i>=1;i--)
+//    {
+//        rem=n%10;
+//        if(rem!=0)
+//        {
+//            nn=nn*10+rem;
+//        }else
+//              n=n/10;
+//     }
+//  }
+//
+//
+//
+//
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find sum of all odd numbers between 1 to n.
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,sum=0;
+//    printf("enter the number:: \t");
+//    scanf("%d",&n);
+//
+//       for(int i=1;i<=n;i+=2)
+//    {
+//    sum=sum+i;
+//    }
+//
+//       printf("\n sum of all even numbers from 1-n %d",sum) ;
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print multiplication table of any number
+//#include<stdio.h>
+//int main ()
+//{
+//    int n;
+//    printf("ENTER THE NUMBER:: \t");
+//    scanf("%d",&n);
+//    printf("\n MULTIPLICATION TABLE OF %d::",n);
+//    for(int i=1;i<=10;i++)
+// {
+//     printf("\n %d",n*i);
+// }
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to count number of digits in a number
+//#include<stdio.h>
+//int main ()
+//{
+//
+//    int n,rem,count=0;
+//    printf("ENTER THE NUMBER \t");
+//    scanf("%d",&n);
+//    for(;n!=0;n=n/10)
+//    {
+//        rem=n%10;
+//        count++;
+//    }
+//
+//    printf("\n THE COUNT OF THE NUMBER IS %d",count);
+//    return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find first and last digit of a number.
 
-    for(int i=1;i<=9;i++)
- {
-     for(; n!=0; )
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,fn=0,ln=0,rem;
+//    printf("\n enter the number::");
+//    scanf("%d",&n);
+//    rem=n%10;
+//    ln=rem;
+//    for(int i=0; n!=0; i++)
+//    {    rem=0;
+//        rem=n%10;
+//        fn=rem;
+//        n=n/10;
+//    }
+//
+//
+//    printf("\n first digit is %d",fn);
+//    printf("\n last digit is %d",ln);
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find sum of first and last digit of a number
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,fd,ld,rem;
+//    printf("n enter the number ::");
+//    scanf("%d",&n);
+//    rem=n%10;
+//    ld=rem;
+//
+//    for(int i=0; n!=0; i++)
+//    {
+//        rem=0;
+//        rem=n%10;
+//        fd=rem;
+//        n=n/10;
+//    }
+//    printf("sum of first and last digit is %d",fd+ld);
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to swap first and last digits of a number.
 
-    {
-         rem=n%10;
-
-         if(rem!=i)
-
-      {
-      printf("\n %d",i);
-
-      }
-           n=n/10;
-    }
- }
-
-
-return 0;
-}
 
 
 
 
+//==============================================================================================================================================================
+
+/// WAP to generate the max using the digits of entered number
+
+//#include <stdio.h>
+//int main()
+//{
+//	int no,nn=0,rem,tmp,d;
+//	printf("\n Enter the No: ");
+//	scanf("%d",&no);
+//	tmp=no;
+//
+//	for(d=9;d>=0;d--)
+//	{
+//		no=tmp;
+//		for(;no!=0;)
+//		{
+//			rem=no%10;
+//			if(rem==d)
+//			{
+//				nn=(nn*10)+rem;
+//			}
+//			no=no/10;
+//		}
+//	}
+//	printf("\n Max Number: %d",nn);
+//	return 0;
+//}
+//==============================================================================================================================================================
+/// Generate max from even and odd digits from entered number
+
+//#include <stdio.h>
+//int main()
+//{
+//	int no,enn=0,onn=0,rem,tmp,d;
+//	printf("\n Enter the No: ");
+//	scanf("%d",&no);
+//	tmp=no;
+//
+//	for(d=9;d>=0;d--)
+//	{
+//		no=tmp;
+//		for(;no!=0;)
+//		{
+//			rem=no%10;
+//			if(rem==d)
+//			{
+//				if(rem%2==0)
+//					enn=(enn*10)+rem;
+//				else
+//					onn=(onn*10)+rem;
+//			}
+//			no=no/10;
+//		}
+//	}
+//	printf("\n Max Number from Even Digits: %d",enn);
+//	printf("\n Max Number from odd Digits: %d",onn);
+//	return 0;
+//}
+//==============================================================================================================================================================
+/// WAP to Find Missing digits in a number entered thw keyboard.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,rem,d,flag=0,temp;
+//    printf("\n enter the number::");
+//    scanf("%d",&n);
+//    temp=n;
+//    printf("\n missing digits are ::");
+//
+//    for(d=0; d<=9; d++)
+//    {
+//        n=temp;
+//
+//        for( ; n!=0;)
+//        {
+//            rem=n%10;
+//            if(d==rem)
+//            {
+//                flag=1;
+//                break;
+//            }
+//            n=n/10;
+//        }
+//        if(flag==0)
+//        {
+//            printf("%d",d);
+//        }
+//    }
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to calculate sum of digits of a number.
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,rem,sum=0;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//    for(;n!=0;n=n/10)
+//    {
+//        rem=n%10;
+//        sum=sum+rem;
+//
+//    }
+//    printf("\n sum of digit %d",sum);
+//    return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to calculate product of digits of a number
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,rem,p=1;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//    for(;n!=0;n=n/10)
+//    {
+//        rem=n%10;
+//        p=p*rem;
+//
+//    }
+//    printf("\n product of digit %d",p);
+//    return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to enter a number and print its reverse
+//#include<stdio.h>
+//int main ()
+//{
+//   int n,rev,rem;
+//   printf(" enter any number \t");
+//   scanf("%d",&n);
+//    for(rev=0;n!=0;n=n/10){
+//
+//        rev=(rev*10)+(n%10);
+//    }
+//    printf("\n reverse number is %d",rev);
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is palindrome or not
+//#include<stdio.h>
+//int main ()
+//{
+//   int n,rev,rem,temp;
+//   printf(" enter any number \t");
+//   scanf("%d",&n);
+//     temp=n;
+//    for(rev=0;n!=0;n=n/10)
+//    {
+//      rev=(rev*10)+(n%10);
+//    }
+//    n=temp;
+//    if(rev==n)
+//    {
+//        printf("\n number is palindrome %d",rev);
+//    }else
+//    {
+//        printf("\n number is not palindrome %d",rev);
+//    }
+//    return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find frequency of each digit in a given integer
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,temp,rem,dc=0;
+//    printf("\n enter the number ::");
+//    scanf("%d",&n);
+//    temp=n;
+//
+//    for(int i=0;i<=9;i++)
+//    {
+//        n=temp;
+//        dc=0;
+//        for(;n!=0;)
+//        {
+//            rem=n%10;
+//            if(i==rem)
+//            {
+//                dc++;
+//            }
+//            n=n/10;
+//        }
+//        if(dc>1)
+//            printf("\n %d digit occured at %d times",i,dc);
+//    }
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to enter a number and print it in words.
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,rem,rev,temp,r;
+//    printf("\n enter the any number:");
+//    scanf("%d",&n);
+//
+//    for(;n!=0;n=n/10)
+//    {
+//        rem=n%10;
+//        rev=(rev*10)+(rem*10);
+//    }
+//     temp=rev;
+//     r=0;
+//        for(;temp!=0;temp=temp/10)
+//        {
+//          r=temp%10;
+//          if(r==9)
+//          {
+//            printf("\n nine");
+//          }
+//         else if(r==8)
+//          {
+//              printf("\n eight");
+//          }
+//          else if(r==7)
+//          {
+//              printf("\n seven");
+//          }
+//          else if(r==6)
+//          {
+//              printf("\n six");
+//          }
+//         else if(r==5)
+//          {
+//              printf("\n five");
+//          }
+//         else if(rem==4)
+//          {
+//              printf("\n four");
+//          }
+//          else if(r==3)
+//          {
+//              printf("\n three");
+//          }
+//          else if(r==2)
+//          {
+//              printf("\n two");
+//          }
+//          else if(r==1)
+//          {
+//              printf("\n one");
+//          }
+//          else if(r==0)
+//          {
+//              printf("\n zero");
+//          }
+//
+//        }
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print all ASCII character with their values
+//#include<stdio.h>
+//int main ()
+//{
+//    for(int i=0;i<=255;i++)
+//    {
+//        printf("\n ascii value of character %c %d",i,i);
+//    }
+//  return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find power of a number using for loop
+
+//#include<stdio.h>
+//int main()
+//{
+//    int a,b,p=1;
+//    printf("\n enter number ::");
+//    scanf("%d %d",&a,&b);
+//
+//    for(int i=1;i<=b;i++)
+//      {
+//         p=p*a;
+//      }
+//      printf("\n %d",p);
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+///  Write a C program to find all factors of a number
+//#include<stdio.h>
+//int main ()
+//{
+//    int n;
+//    printf("enter the number ::");
+//    scanf("%d",&n);
+//
+//    for(int i=1;i<=n;i++)
+//    {
+//        if(n%i==0)
+//        {
+//            printf("\n %d",i);
+//        }
+//    }
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to calculate factorial of a number
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,fact=1;
+//    printf("\n enter the number: ");
+//    scanf("%d",&n);
+//
+//    for(int i=1;i<=n;i++)
+//       {
+//           fact=fact*i;
+//       }
+//    printf("\n factorial of %d is %d",n,fact);
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find HCF (GCD) of two numbers
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int i,n1,n2,min,hcf=1;
+//
+//
+//    printf("Enter any two numbers to find HCF: ");
+//    scanf("%d%d", &n1, &n2);
+//
+//
+//    min = (n1<n2) ? n1 : n2;
+//
+//    for(i=1; i<=min; i++)
+//    {
+//
+//        if(n1%i==0 && n2%i==0)
+//        {
+//            hcf = i;
+//        }
+//    }
+//
+//    printf("HCF of %d and %d = %d\n", n1, n2, hcf);
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find LCM of two numbers
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int i,n1,n2,max,lcm=1;
+//
+//
+//    printf("Enter any two numbers to find LCM: ");
+//    scanf("%d%d", &n1, &n2);
+//
+//
+//    max = (n1<n2) ? n1 : n2;
+//
+//    for(i=1; i<=max; i++)
+//    {
+//
+//        if(n1%i==0 && n2%i==0)
+//        {
+//            lcm = i;
+//        }
+//    }
+//
+//    printf("LCM of %d and %d = %d\n", n1, n2, lcm);
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to check whether a number is Prime number or not
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,temp=0;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//    for(int i=2;i<=n/2;i++)
+//    {
+//        if(n%i==0)
+//        {
+//            temp++;
+//            break;
+//        }
+//    }
+//
+//        if(temp==0 && n!=1)
+//            printf("\n %d is prime number",n );
+//        else
+//            printf("\n %d id not prime number",n);
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all Prime numbers between 1 to n
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,i,j;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//
+//    for( i=1;i<=n;i++)
+//     {
+//
+//       for(j=2;j<i;j++)
+//        {
+//            if(i%j==0)
+//            {
+//              break;
+//            }
+//
+//        }
+//         if(i==j)
+//            printf("\n %d",i);
+//
+//     }
+//
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find sum of all prime numbers between 1 to n.
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,i,j,sum=0;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//
+//    for( i=1;i<=n;i++)
+//     {
+//
+//       for(j=2;j<i;j++)
+//        {
+//            if(i%j==0)
+//            {
+//              break;
+//            }
+//
+//        }
+//         if(i==j)
+//        {
+//            sum=sum+i;
+//        }
+//
+//     }
+//     printf("\n sum is %d",sum);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find all prime factors of a number
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,i,fact,flag,d;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    for(i=1;i<=n/10;i++)
+//    {
+//     if(n%i==0)
+//     {
+//         fact=i;
+//         d=2;
+//         while(d<=(fact/2))
+//         {
+//             if(fact%d==0)
+//             {
+//                 flag=1;
+//                 break;
+//             }
+//         }
+//         if(flag==0)
+//            printf("\n %d",fact);
+//
+//     }
+//    }
+// return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is Armstrong number or not
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,dc,rem,temp,ans,sum=0;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//     temp=n;
+//
+//    for(dc=0; n!=0; dc++, n=n/10);
+//
+//       n=temp;
+//
+//       for(;n!=0;n=n/10)
+//     {
+//         rem=n%10;
+//         ans=1;
+//
+//          for(int i=0;i<dc; i++)
+//        {
+//            ans=ans*rem;
+//        }
+//            sum=sum+ans;
+//     }
+//
+//     if(temp==sum)
+//                   printf("\n %d is Armstrong number",temp);
+//     else
+//                   printf("\n %d is not Armstrong number",temp);
+//
+//   return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all Armstrong numbers between 1 to n.
+
+// #include<stdio.h>
+// int main ()
+//{
+//
+//    int no,n,i,dc,rem,ans,sum=0,tmp;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//    for(no=1;no<=n;no++)
+//    {
+//        tmp=no;
+//
+//        for(dc=0; no!=0; dc++,no=no/10);
+//        printf("Dc is %d ",dc);
+//
+//        no=tmp;
+//        sum=0;
+//        for(;no!=0; no=no/10)
+//        {
+//            rem=no%10;
+//            ans=1;
+//
+//            for(i=0;i<dc;i++)
+//            {
+//                ans=ans*rem;
+//
+//            }
+//            sum=sum+ans;
+//            no=no/10;
+//        }
+//        printf("\n %d is number............ ",tmp);
+//        no=tmp;
+//        printf("\n %d is number ",tmp);
+//
+//        if(sum==tmp)
+//        {
+//            printf("\n %d is armstrong number ",tmp);
+//        }
+//
+//
+//    }
+//
+//    return 0;
+//}
+
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is Perfect number or not
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,rem,ans=0;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//    for(int i=1; i<n; i++)
+//    {
+//        if(n%i==0)
+//
+//        {
+//            ans=ans + i;
+//        }
+//    }
+//
+//    if(ans==n)
+//    {
+//        printf("\n %d is perfect number",n);
+//    }
+//    else
+//    printf("\n %d not perfect number",n);
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all Perfect numbers between 1 to n.
+
+//#include<stdio.h>
+//int main ()
+//{
+//        int i,j,n,ans=0;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//    for( i=1;i<=n;i++)
+//
+//  {
+//      ans=0;
+//     for( j=1; j<i; j++)
+//    {
+//        if(i%j==0)
+//
+//        {
+//            ans=ans+j;
+//        }
+//    }
+//
+//    if(ans==i)
+//    {
+//        printf("\n %d is perfect number",i);
+//
+//    }
+//
+//
+//  }
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is Strong number or not
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,tmp,i,rem,fact,sum=0;
+//
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//    tmp=n;
+//    for(;n!=0;n=n/10)
+//
+//    {
+//        rem=n%10;
+//        fact=1;
+//        for(i=1;i<=rem;i++)
+//        {
+//            fact=fact*i;
+//            printf("\n fact = %d",fact);
+//        }
+//        sum+=fact;
+//        printf("\n sum=%d",sum);
+//
+//    }
+//    if(sum==tmp)
+//        printf("\n %d is strong number",sum);
+//    else
+//        printf("\n %d is not strong number",sum);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print all Strong numbers between 1 to n
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,n,i,tmp=0,rem,fact,sum=0;
+//
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    for(no=1;no<=n;no++)
+//   {
+//         tmp=no;
+//         sum=0;
+//
+//        for(;no!=0; no=no/10)
+//
+//        {
+//            rem=no%10;
+//            fact=1;
+//
+//            for(i=1;i<=rem;i++)
+//            {
+//                fact=fact*i;
+//            }
+//
+//            sum+=fact;
+//        }
+//
+//            no=tmp;
+//
+//           if(sum==tmp)
+//            printf("\n %d",tmp);
+//    }
+//
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print Fibonacci series up to n terms
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//     int fibn1=1;
+//     int fibn2=2;
+//    long int fibn3=0;
+//
+//    for(int i=1;i<=n;i++)
+//     {
+//
+//     long fibn3 = fibn1 + fibn2;
+//
+//      fibn1=fibn2;
+//      fibn2=fibn3;
+//
+//     printf("\n %ld",fibn3);
+//
+//     }
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/**************************************************** WHILE LOOP *************************************************************
+
+
+ Write a C program to print all natural numbers from 1 to n.- using while loop */
+
+// #include<stdio.h>
+// int main ()
+// {
+//     int n,i=1;
+//     printf("\n enter the number:");
+//     scanf("%d",&n);
+//
+//     while(i<=n)
+//     {
+//         printf("\n %d",i);
+//         i++;
+//     }
+//
+//     return 0;
+// }
+//==============================================================================================================================================================
+///  Write a C program to print all natural numbers in reverse (from n to 1).- using while loop
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,i;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//    i=n;
+//    while(i>=1)
+//    {
+//        printf("\n %d",i);
+//        i--;
+//    }
+//    return 0;
+//}
+//==============================================================================================================================================================
+
+///  Write a C program to print all alphabets from a to z.- using while loop
+
+//#include<stdio.h>
+//
+//int main ()
+//{
+//    int i=97;
+//    while (i<=122)
+//    {
+//       printf("\t %c",i);
+//       i++;
+//    }
+//return 0;
+//}
+
+/***********************  ANOTHER WAY  *********************/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i='A';
+//
+//    while(i<='Z')
+//    {
+//        printf("\t %c",i);
+//
+//        i++;
+//    }
+//  return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all even numbers between 1 to 100.- using while loop
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(i<=n)
+//    {
+//        if(i%2==0)
+//      {
+//        printf("\n %d",i);
+//
+//      }
+//      i++;
+//    }
+//   return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print all odd number between 1 to 100
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//
+//    while(i<=n)
+//    {
+//        if(i%2!=0)
+//     {
+//        printf("\n %d",i);
+//     }
+//     i++;
+//    }
+//    return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find sum of all natural numbers between 1 to n
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n,sum=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//    while(i<=n)
+//    {
+//        sum+=i;
+//    i++;
+//    }
+//    printf("\n sum =%d",sum);
+//
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find sum of all even numbers between 1 to n
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n,sum;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(i<=n)
+//    {
+//        if(i%2==0)
+//        {
+//            sum+=i;
+//        }
+//     i++;
+//    }
+//    printf("\n sum =%d",sum);
+//
+//   return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find sum of all odd numbers between 1 to n
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n,sum;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(i<=n)
+//    {
+//        if(i%2!=0)
+//        {
+//            sum+=i;
+//        }
+//      i++;
+//    }
+//    printf("\n sum =%d",sum);
+//    return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print multiplication table of any number
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(i<=10)
+//    {
+//        printf("\n %d",n*i);
+//
+//     i++;
+//    }
+//  return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to count number of digits in a number
+
+// #include<stdio.h>
+// int main()
+//{
+//  int n,rem,cnt=0;
+//
+//  printf("\n enter the number :");
+//  scanf("%d",&n);
+//  while(n!=0)
+//  {
+//      rem=n%10;
+//      cnt++;
+//      n=n/10;
+//  }
+//  printf("\n count of number %d",cnt);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find first and last digit of a number.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,tmp,rem,fd,ld;
+//
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//    tmp=n;
+//    while(n>10)
+//    {
+//        n=n/10;
+//    }
+//    printf("\n first digit =%d",n);
+//
+//    rem=tmp%10;
+//    printf("\n last digit =%d",rem);
+//
+//   return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find sum of first and last digit of a number
+
+// #include<stdio.h>
+// int main ()
+//{
+//  int n,tmp,rem,fd,ld;
+//
+//  printf("\n enter the number :");
+//  scanf("%d",&n);
+//  tmp=n;
+//  while(n>10)
+//  {
+//    n=n/10;
+//  }
+//  printf("\n %d",n);
+//
+//  rem=tmp%10;
+//  printf("\n sum of first and last digit =%d" ,n+rem);
+//  return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to swap first and last digits of a number.
+
+// #include<stdio.h>
+// int main()
+//
+//{
+//    int no,rem,tem,d,i,ans=1,nno;
+//
+//    printf("\n Enter any Number : ");
+//    scanf("%d",&no);
+//    tem=no;
+//
+//    for(d=0;no!=0;d++,no=no/10);
+//
+//
+//
+//    for(i=1;i<d;i++)
+//    {
+//        ans=(ans*10);
+//    }
+//
+//    no=tem;
+//    rem=no%10;
+//    nno=rem*ans; // printf("Number=%d",nno);
+//
+//    no=no%ans;
+//    no=no/10;
+//    no=no*10;
+//    tem=tem/ans;
+//
+//    nno=(nno+no)+tem;
+//
+//    printf("\n New Number : %d",nno);
+//
+//
+//    return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to calculate sum of digits of a number
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int n,rem,sum=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(n!=0)
+//    {
+//        rem=n%10;
+//        sum+=rem;
+//        n=n/10;
+//    }
+//    printf("\n sum=%d",sum);
+//
+// return 0;
+//
+//}
+//==============================================================================================================================================================
+///  Write a C program to calculate product of digits of a number
+
+//#include<stdio.h>
+//
+//int main ()
+//{
+//    int n,rem,p=1;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(n!=0)
+//    {
+//        rem=n%10;
+//        p=p*rem;
+//        n=n/10;
+//    }
+//   printf("\n product =%d",p);
+//  return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to enter a number and print its reverse
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,rem,rev;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//     rev=0;
+//    while(n!=0)
+//    {
+//        rem=n%10;
+//        rev=(rev*10)+(rem);
+//        n=n/10;
+//    }
+//    printf("\n reverse number=%d",rev);
+//
+//  return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is palindrome or not
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int n,tmp,rem,nn=0;
+//    printf("\n enter the number:");
+//    scanf("%d",&n);
+//    tmp=n;
+//    while(n!=0)
+//    {
+//        rem=n%10;
+//        nn=(nn*10)+rem;
+//        n=n/10;
+//    }
+//    if(nn==tmp)
+//
+//               printf("\n %d is palindrome number",nn);
+//
+//    else
+//               printf("\n %d is not palindrome number",nn);
+//    return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find frequency of each digit in a given integer
+
+//#include<stdio.h>
+//int main ()
+//{
+//        int n,i=0,nn=0,rem,tmp,cnt;
+//        printf(" enter the number :\t ");
+//        scanf("%d",&n);
+//         tmp=n;
+//         while(i<=9)
+//
+//    {
+//             n=tmp;
+//             cnt=0;
+//             nn=0;
+//         while(n!=0)
+//        {
+//            rem=n%10;
+//
+//                 if(rem==i)
+//               {
+//                    cnt++;
+//                    nn=i;
+//               }
+//        n=n/10;
+//        }
+//               if(cnt>1)
+//             {
+//             printf("\n %d is arrived at %d times",nn,cnt);
+//             }
+//
+//         i++;
+//    }
+//
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to enter a number and print it in words.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,nn=0,rem;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(n!=0)
+//    {
+//        rem=n%10;
+//        nn=(nn*10)+rem;
+//        n=n/10;
+//    }
+//       rem=0;
+//      while(nn!=0)
+//     {
+//         rem=nn%10;
+//        if(rem==0)
+//            printf("\n ZERO");
+//        if(rem==1)
+//            printf("\t ONE");
+//        if(rem==2)
+//            printf("\t TWO");
+//        if(rem==3)
+//            printf("\t THREE");
+//        if(rem==4)
+//            printf("\t FOUR");
+//        if(rem==5)
+//            printf("\t FIVE");
+//        if(rem==6)
+//            printf("\t SIX");
+//        if(rem==7)
+//            printf("\t SEVEN");
+//        if(rem==8)
+//            printf("\t EIGHT");
+//        if(rem==9)
+//            printf("\t NINE");
+//    nn=nn/10;
+//    }
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print all ASCII character with their values
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1;
+//
+//    while(i<=255)
+//    {
+//        printf("\n %d=%c",i,i);
+//     i++;
+//    }
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to find power of a number using for loop.
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j,ans=1;
+//    printf("\n enter the base and exponent : ");
+//    scanf("%d %d",&i,&j);
+//
+//    while(j>0)
+//    {
+//       ans=ans*i;
+//    j--;
+//    }
+//
+//    printf("\n %d",ans);
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+///  Write a C program to find all factors of a number.
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int n,i=2;
+//    printf("\n ENTER THE NUMBER :");
+//    scanf("%d",&n);
+//
+//    while(i<n)
+//    {
+//      if(n%i==0)
+//      {
+//          printf("\n FACTOR OF %d =>%d",n,i);
+//      }
+//    i++;
+//    }
+//  return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to calculate factorial of a number
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int n,fact=1;
+//    printf("\n ENTER THE NUMBER :");
+//    scanf("%d",&n);
+//
+//    while(n!=0)
+//    {
+//        fact*=n;
+//     n--;
+//    }
+//    printf("\n FACTORIAL IS %d",fact);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find HCF (GCD) of two numbers
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int n1,n2,i=1,min,hcf;
+//    printf("\n enter the n1 and n2 \t");
+//    scanf("%d %d",&n1,&n2);
+//
+//    min= (n1<n2) ? n1  : n2 ;
+//
+//    while(i<=min)
+//    {
+//        if(n1%i==0 && n2%i==0)
+//         hcf=i;
+//    i++;
+//    }
+//    printf("\n hcf of %d and %d : %d",n1,n2,hcf);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find LCM of two numbers
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n1,n2,max=0,lcm;
+//    printf("\n enter the n1 and n2 \t");
+//    scanf("%d %d",&n1,&n2);
+//
+//    max= (n1>n2)? n1:n2;
+//
+//    while(i<=max)
+//    {
+//        if(i%n1==0 && i%n2==0)
+//        {
+//            lcm=i;
+//        }
+//    i++;
+//    }
+//    printf("\n lcm of %d and %d : %d",n1,n2,lcm);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is Prime number or not
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int n,i=2,flag=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(i<n)
+//    {
+//               if(n%i==0)
+//                flag++;
+//    i++;
+//    }
+//    if(flag==0 && n>1)
+//    {
+//     printf("\n %d is prime number ",n);
+//    }
+// return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all Prime numbers between 1 to n.
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int no=1,n,i;
+//    printf("enter the number :");
+//    scanf("%d",&n);
+//
+//  while(no<=n)
+//  {
+//      i=2;
+//      while(i<no)
+//      {
+//          if(no%i==0)
+//          {
+//              break;
+//          }
+//
+//          i++;
+//      }
+//    if(no==i)
+//      {
+//          printf("\n %d",no);
+//      }
+//  no++;
+//  }
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find sum of all prime numbers between 1 to n
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int no=1,n,i,sum=0;
+//    printf("enter the number:");
+//    scanf("%d",&n);
+//
+//    while(no<=n)
+//    {
+//        i=2;
+//
+//        while(i<no)
+//        {
+//            if(no%i==0)
+//            {
+//                break;
+//            }
+//
+//         i++;
+//        }
+//        if(no==i)
+//        {
+//            sum+=no;
+//        }
+//
+//
+//    no++;
+//    }
+//    printf("\n sum=%d",sum);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find all prime factors of a number
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,i=2,d,factor;
+//    printf("enter the number :");
+//    scanf("%d",&no);
+//
+//    while(i<no)
+//    {
+//        if(no%i==0)
+//        {
+//           factor=i;
+//
+//           d=2;
+//           while(d<factor)
+//           {
+//               if(factor%d==0)
+//                {
+//                   break;
+//                }
+//
+//        d++;
+//           }
+//            if(factor==d)
+//                 {
+//                   printf("\n prime number=%d",factor);
+//                 }
+//
+//        }
+//
+//     i++;
+//    }
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to check whether a number is Armstrong number or not
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,cnt,rem,ans,sum=0,tmp;
+//
+//    printf("enter the number :");
+//    scanf("%d",&no);
+//    tmp=no;
+//
+//     cnt=0;
+//     while( no!=0 )
+//  {
+//     no=no/10;
+//     cnt++;
+//  }
+//     no=tmp;
+//     printf("\n %d",no);
+//
+//        while( no!=0 )
+//      {
+//           rem=no%10;
+//           no=no/10;
+//           ans=1;
+//
+//         int i=0;
+//        while(i<cnt)
+//        {
+//            ans=ans*rem;
+//
+//         i++;
+//        }
+//        printf("\n ans is %d",ans);
+//        sum+=ans;
+//        printf("\n sum is %d",sum);
+//      }
+//
+//    if(sum==tmp)
+//    {
+//        printf("\n %d is Armstrong number",tmp);
+//    }
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print all Armstrong numbers between 1 to n.
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,no=1,cnt,rem,tmp,ans,sum=0,i;
+//
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//     while(no<=n)
+//  {
+//        tmp=no;
+//        sum=0;
+//
+//     cnt=0;
+//    while(no!=0)
+//    {
+//         no=no/10;
+//
+//     cnt++;
+//    }
+//
+//     no=tmp;
+//
+//          while(no!=0)
+//      {
+//         rem=no%10;
+//         no=no/10;
+//         ans=1;
+//
+//           i=0;
+//           while(i<cnt)
+//           {
+//               ans=ans*rem;
+//
+//            i++;
+//           }
+//              sum+=ans;
+//      }
+//       no=tmp;
+//
+//      if(sum==no)
+//      {
+//          printf("\n %d",sum);
+//      }
+//
+// no++;
+//
+// }
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is Perfect number or not
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,ans=0,i;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//
+//    i=1;
+//    while(i<no)
+//    {
+//           if(no%i==0)
+//          {
+//            ans=ans+i;
+//          }
+//    i++;
+//    }
+//    if(no==ans)
+//        printf("\n %d is perfect number",no);
+//    else
+//        printf("\n %d is not perfect number",no);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all Perfect numbers between 1 to n
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,no=1,ans=0,i;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(no<=n)
+//  {
+//      ans=0;
+//      i=1;
+//    while(i<no)
+//    {
+//           if(no%i==0)
+//          {
+//            ans=ans+i;
+//          }
+//    i++;
+//    }
+//    if(no==ans)
+//        printf("\n %d ",no);
+//
+//   no++;
+//  }
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to check whether a number is Strong number or not
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,i,tmp,cnt,rem,fact,sum=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//     tmp=no;
+//
+//      while(no!=0)
+//      {
+//        rem=no%10;
+//        no=no/10;
+//
+//        fact=1;
+//
+//        i=1;
+//      while(i<=rem)
+//        {
+//            fact=fact*i;
+//        i++;
+//        }
+//        sum+=fact;
+//
+//      }
+//
+//    if(sum==tmp)
+//    {
+//        printf("\n %d is strong number",tmp);
+//    }
+//    else
+//    {
+//        printf("\n %d is not strong number",tmp);
+//    }
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all Strong numbers between 1 to n
+//
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,no=1,tmp,rem,i,fact,sum;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(no<=n)
+//    {
+//        tmp=no;
+//        sum=0;
+//
+//        while(no!=0)
+//        {
+//            rem=no%10;
+//            no=no/10;
+//
+//            fact=1;
+//            i=1;
+//           while(i<=rem)
+//           {
+//               fact=fact*i;
+//           i++;
+//           }
+//
+//            sum+=fact;
+//        }
+//      no=tmp;
+//
+//      if(sum==tmp)
+//      {
+//          printf("\n %d",tmp);
+//      }
+//   no++;
+//    }
+//
+// return 0;
+//
+//}
+//
+//==============================================================================================================================================================
+/// Write a C program to print Fibonacci series up to n terms
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//     int a=0;
+//     int b=1;
+//     int c=a+b;
+//     printf("\n %d\n %d",a,b);
+//
+//      int i=3;
+//     while(c<=n)
+//    {
+//      a=b;
+//      b=c;
+//      c=a+b;
+//
+//     printf("\n %d",c);
+//
+//     i++;
+//    }
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/*********************************************************** DO WHILE ***************************************************************/
+
+///  Write a C program to print all natural numbers from 1 to n.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    do{
+//        printf("\n %d",i);
+//
+//        i++;
+//      }while(i<=n);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all natural numbers in reverse (from n to 1)
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,i;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//    i=n;
+//    do{
+//        printf("\n %d",i);
+//        i--;
+//      }while(i>=1);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all alphabets from a to z
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=97;
+//
+//    do{
+//        printf("\t %c",i);
+//        i++;
+//
+//      }while(i<=122);
+//
+//return 0;
+//}
+  /*********     ANOTHER WAY     ***********/
+
+//#include<stdio.h>
+//int main ()
+//  {
+//      int i='A';
+//
+//      do{
+//        printf("\t %c",i);
+//        i++;
+//      }while(i<='Z');
+//
+//return 0;
+//  }
+//==============================================================================================================================================================
+///  Write a C program to print all even numbers between 1 to 100
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    do{
+//        if(i%2==0)
+//        {
+//            printf("\n %d",i);
+//        }
+//     i++;
+//      }while(i<=100);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print all odd number between 1 to 100.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    do{
+//        if(i%2!=0)
+//        {
+//            printf("\n %d",i);
+//        }
+//
+//    i++;
+//      }while(i<=n);
+//
+// return 0;
+//}
+//
+//==============================================================================================================================================================
+///  Write a C program to find sum of all natural numbers between 1 to n.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n,sum;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    do{
+//        sum+=i;
+//
+//     i++;
+//      }while(i<=n);
+//
+//    printf("\n sum =%d",sum);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find sum of all even numbers between 1 to n
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n,sum=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    do{
+//        if(i%2==0)
+//        {
+//            sum+=i;
+//        }
+//     i++;
+//      }while(i<=n);
+//
+//    printf("\n sum =%d",sum);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find sum of all odd numbers between 1 to n.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n,sum;
+//
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    do{
+//        if(i%2!=0)
+//        {
+//            sum+=i;
+//        }
+//
+//     i++;
+//      }while(i<=n);
+//
+//
+//printf("\n sum =%d",sum);
+//
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+///  Write a C program to print multiplication table of any number.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=1,n;
+//    printf("\n enter any number :");
+//    scanf("%d",&n);
+//
+//     do{
+//        printf("\n %d",i*n);
+//
+//     i++;
+//       }while(i<=10);
+//
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to count number of digits in a number
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,cnt=0;
+//    printf ("\n enter the number :");
+//    scanf("%d",&no);
+//
+//    do{
+//        no=no/10;
+//        cnt++;
+//
+//      }while(no!=0);
+//
+//    printf("\n count of number =%d",cnt);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find first and last digit of a number
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,fd=0,tmp,rem;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//    tmp=no;
+//    do{
+//        no=no/10;
+//        fd=no;
+//        rem=tmp%10;
+//
+//      }while(no>10);
+//
+//    printf("\n first digit =%d",fd);
+//    printf("\n last digit =%d",rem);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find sum of first and last digit of a number.
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,fd=0,tmp,rem,sum=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//    tmp=no;
+//
+//      do{
+//        no=no/10;
+//        fd=no;
+//        rem=tmp%10;
+//
+//       }while(no>10);
+//
+//    printf("\n first digit =%d",fd);
+//    printf("\n last digit =%d",rem);
+//    printf("\n sum=%d",fd+rem);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to swap first and last digits of a number
 
 
 
@@ -1380,6 +3492,4027 @@ return 0;
 
 
 
+
+
+
+
+
+
+
+
+//==============================================================================================================================================================
+/// Write a C program to calculate sum of digits of a number
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,sum=0,rem;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//
+//    do{
+//        rem=no%10;
+//        sum+=rem;
+//        no=no/10;
+//
+//      }while(no!=0);
+//
+//    printf("\n sum=%d",sum);
+//
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+///  Write a C program to calculate product of digits of a number
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,p=1,rem;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//
+//    do{
+//        rem=no%10;
+//        p*=rem;
+//        no=no/10;
+//
+//      }while(no!=0);
+//
+//    printf("\n sum=%d",p);
+//
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+///  Write a C program to enter a number and print its reverse
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,rem,rev=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//
+//    do{
+//        rem=no%10;
+//        rev=(rev*10)+(rem);
+//        no=no/10;
+//
+//      }  while(no!=0);
+//
+//    printf("\ reverse number =%d",rev);
+//
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+///  Write a C program to check whether a number is palindrome or not
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,rem,rev=0,tmp;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//      tmp=no;
+//    do{
+//        rem=no%10;
+//        rev=(rev*10)+(rem);
+//        no=no/10;
+//
+//      }  while(no!=0);
+//
+//      if(rev==tmp)
+//      {
+//          printf("\n %d is palindrome number",tmp);
+//      }
+//      else
+//        printf("\n %d is not palindrome number",tmp);
+//
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+/** Write a C program to find frequency of each digit in a given integer */
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,nn,tmp,rem,i=0,cnt;
+//
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//    tmp=no;
+//    do{
+//
+//        cnt=0;
+//        no=tmp;
+//        nn=0;
+//        do{
+//            rem=no%10;
+//            if(rem==i)
+//            {
+//                cnt++;
+//                nn=i;
+//            }
+//
+//
+//        no=no/10;
+//        }while(no!=0);
+//
+//
+//        if(cnt>1)
+//        {
+//            printf("\n %d is occured at %d times",i,cnt);
+//        }
+//
+//     i++;
+//    }while(i<=9);
+//
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to enter a number and print it in words.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,nn=0,rem=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//
+//   do{
+//        rem=n%10;
+//        nn=(nn*10)+rem;
+//    n=n/10;
+//    } while(n!=0);
+//
+//
+//     do{
+//         rem=nn%10;
+//        if(rem==0)
+//            printf("\n ZERO");
+//        if(rem==1)
+//            printf("\t ONE");
+//        if(rem==2)
+//            printf("\t TWO");
+//        if(rem==3)
+//            printf("\t THREE");
+//        if(rem==4)
+//            printf("\t FOUR");
+//        if(rem==5)
+//            printf("\t FIVE");
+//        if(rem==6)
+//            printf("\t SIX");
+//        if(rem==7)
+//            printf("\t SEVEN");
+//        if(rem==8)
+//            printf("\t EIGHT");
+//        if(rem==9)
+//            printf("\t NINE");
+//    nn=nn/10;
+//    }   while(nn!=0);
+//
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all ASCII character with their values
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i=0;
+//    do{
+//        printf("\n %d %c",i,i);
+//    i++;
+//    }while(i<=255);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find power of a number using for loop
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j,ans=1;
+//    printf("\n enter the base and exponant : \t");
+//    scanf("%d %d",&i,&j);
+//
+//    do{
+//        ans=ans*i;
+//
+//    j--;
+//      }while(j>0);
+//
+//    printf("\n power =%d",ans);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+///   Write a C program to find all factors of a number.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,i=1,factor;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//
+//    do{
+//        if(no%i==0)
+//        {
+//            printf("\n %d",i);
+//        }
+//    i++;
+//       }while(i<no);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to calculate factorial of a number
+
+//#include<stdio.h>
+//int main ()
+//{
+//   int no,rem,fact=1;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//
+//    do{
+//        fact=fact*no;
+//
+//    no--;
+//    }while(no!=0);
+//
+//    printf("\n factorial of %d is %d",no,fact);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to find HCF (GCD) of two numbers.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n1,n2,min=0,i=1,hcf;
+//    printf("\n enter the numbers :");
+//    scanf("%d%d",&n1,&n2);
+//
+//    min=(n1<n2) ? n1:n2  ;
+//    printf("%d",min);
+//
+//    do{
+//         if(n1%i==0 && n2%i==0)
+//         {
+//             hcf=i;
+//         }
+//
+//     i++;
+//      }while(i<min);
+//
+//     printf("\n HCF OF %d and %d = %d",n1,n2,i);
+//
+// return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to find LCM of two numbers.
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is Prime number or not
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int n,i=2,flag=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//    while(i<n)
+//    {
+//               if(n%i==0)
+//                flag++;
+//    i++;
+//    }
+//    if(flag==0 && n>1)
+//    {
+//     printf("\n %d is prime number ",n);
+//    }
+// return 0;
+//
+//}
+//==============================================================================================================================================================
+///  Write a C program to print all Prime numbers between 1 to n.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no=1,n,i;
+//    printf("enter the number :");
+//    scanf("%d",&n);
+//
+//
+//  do{
+//      i=2;
+//
+//     do{
+//          if(no%i==0)
+//          {
+//              break;
+//          }
+//
+//          i++;
+//      }while(i<no);
+//
+//    if(no==i)
+//      {
+//          printf("\n %d",no);
+//      }
+//  no++;
+//  }while(no<=n);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to find sum of all prime numbers between 1 to n
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no=1,n,i,sum=0;
+//    printf("enter the number:");
+//    scanf("%d",&n);
+//
+//
+//    do{
+//        i=2;
+//
+//
+//       do {
+//            if(no%i==0)
+//            {
+//                break;
+//            }
+//
+//         i++;
+//          }while(i<no);
+//
+//        if(no==i)
+//        {
+//            sum+=no;
+//        }
+//
+//
+//    no++;
+//    }while(no<=n);
+//
+//    printf("\n sum=%d",sum);
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to check whether a number is Armstrong number or not
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,cnt,rem,ans,sum=0,tmp;
+//
+//    printf("enter the number :");
+//    scanf("%d",&no);
+//    tmp=no;
+//
+//     cnt=0;
+//
+//  do{
+//     no=no/10;
+//     cnt++;
+//  } while( no!=0 );
+//
+//     no=tmp;
+//     printf("\n %d",no);
+//
+//
+//     do {
+//           rem=no%10;
+//           no=no/10;
+//           ans=1;
+//
+//         int i=0;
+//
+//       do {
+//            ans=ans*rem;
+//
+//         i++;
+//        } while(i<cnt);
+//
+//        printf("\n ans is %d",ans);
+//        sum+=ans;
+//        printf("\n sum is %d",sum);
+//
+//      } while( no!=0 );
+//
+//
+//    if(sum==tmp)
+//    {
+//        printf("\n %d is Armstrong number",tmp);
+//    }
+//
+// return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to print all Armstrong numbers between 1 to n.
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,no=1,cnt,rem,tmp,ans,sum=0,i;
+//
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//  do{
+//        tmp=no;
+//        sum=0;
+//
+//     cnt=0;
+//     do{
+//         no=no/10;
+//
+//     cnt++;
+//       } while(no!=0);
+//
+//     no=tmp;
+//
+//
+//    do {
+//         rem=no%10;
+//         no=no/10;
+//         ans=1;
+//
+//
+//           i=0;
+//           do {
+//               ans=ans*rem;
+//
+//            i++;
+//           } while(i<cnt);
+//
+//              sum+=ans;
+//
+//      } while(no!=0);
+//       no=tmp;
+//
+//      if(sum==no)
+//      {
+//          printf("\n %d",sum);
+//      }
+//
+// no++;
+//
+// } while(no<=n);
+//return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to check whether a number is Perfect number or not
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,ans=0,i;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//
+//    i=1;
+//
+//    do{
+//           if(no%i==0)
+//          {
+//            ans=ans+i;
+//          }
+//    i++;
+//       }while(i<no);
+//
+//    if(no==ans)
+//        printf("\n %d is perfect number",no);
+//    else
+//        printf("\n %d is not perfect number",no);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all Perfect numbers between 1 to n
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,no=1,ans=0,i;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//
+// do {
+//      ans=0;
+//      i=1;
+//
+//    do{
+//           if(no%i==0)
+//          {
+//            ans=ans+i;
+//          }
+//    i++;
+//    }while(i<no);
+//
+//    if(no==ans)
+//        printf("\n %d ",no);
+//
+//   no++;
+//  } while(no<=n);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+///  Write a C program to check whether a number is Strong number or not
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int no,i,tmp,cnt,rem,fact,sum=0;
+//    printf("\n enter the number :");
+//    scanf("%d",&no);
+//     tmp=no;
+//
+//
+//     do {
+//        rem=no%10;
+//        no=no/10;
+//
+//        fact=1;
+//
+//        i=1;
+//
+//       do {
+//            fact=fact*i;
+//        i++;
+//        }while(i<=rem);
+//
+//        sum+=fact;
+//
+//      }while(no!=0);
+//
+//    if(sum==tmp)
+//    {
+//        printf("\n %d is strong number",tmp);
+//    }
+//    else
+//    {
+//        printf("\n %d is not strong number",tmp);
+//    }
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/// Write a C program to print all Strong numbers between 1 to n
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n,no=1,tmp,rem,i,fact,sum;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//
+//   do {
+//        tmp=no;
+//        sum=0;
+//
+//
+//       do {
+//            rem=no%10;
+//            no=no/10;
+//
+//            fact=1;
+//            i=1;
+//
+//          do {
+//               fact=fact*i;
+//           i++;
+//           } while(i<=rem);
+//
+//            sum+=fact;
+//
+//        } while(no!=0);
+//      no=tmp;
+//
+//      if(sum==tmp)
+//      {
+//          printf("\n %d",tmp);
+//      }
+//   no++;
+//
+//    } while(no<=n);
+//
+// return 0;
+//
+//}
+//==============================================================================================================================================================
+/// Write a C program to print Fibonacci series up to n terms
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int n;
+//    printf("\n enter the number :");
+//    scanf("%d",&n);
+//
+//     int a=0;
+//     int b=1;
+//     int c=a+b;
+//     printf("\n %d\n %d",a,b);
+//
+//      int i=3;
+//
+//    do{
+//      a=b;
+//      b=c;
+//      c=a+b;
+//
+//     printf("\n %d",c);
+//
+//     i++;
+//    } while(c<=n);
+//
+//return 0;
+//}
+//==============================================================================================================================================================
+/****************************************************** PATTERNS ***************************************************/
+
+///    *  *  *  *  *
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i;
+//    for(i=0;i<=4;i++)
+//    {
+//        printf(" * ");
+//    }
+//
+//    return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+    *  *  *  *  *
+    *  *  *  *  *
+    *  *  *  *  *
+    *  *  *  *  *
+    *  *  *  *  *
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//     for(i=0;i<=4;i++)
+//     {
+//         for(j=0;j<=4;j++)
+//         {
+//             printf(" * ");
+//         }
+//         printf("\n");
+//     }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//
+//    for(i=0; i<5; i++)
+//    {
+//        for(j=0; j<5; j++)
+//        {
+//            if(i==0 || i==4)
+//
+//                printf("* ");
+//
+//            else if(j==0 || j==4)
+//
+//                printf("* ");
+//             else
+//           {
+//              printf("  ");
+//           }
+//        }
+//        printf("\n");
+//    }
+//
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+*
+* *
+* * *
+* * * *
+* * * * *
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<=i;j++)
+//        {
+//            printf("* ");
+//        }
+//         printf("\n");
+//    }
+// return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+   * * * * *
+    * * * *
+      * * *
+        * *
+          *
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<=5;j++)
+//        {
+//            if(j<=i)
+//                  printf("  ");
+//            else
+//                  printf("* ");
+//        }
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5-i;j++)
+//
+//        {
+//            printf("* ");
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<4-i)
+//                printf("  ");
+//            else
+//                printf("* ");
+//        }
+//        printf("\n");
+//    }
+//  return 0;
+//}
+//=============================================================================================================================================
+/**
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    for(i=0;i<9;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<=i && i<5)
+//                printf("*");
+//
+//            else if(i>4 && j<9-i)
+//             {
+//                 printf("*");
+//             }
+//        }
+//        printf("\n");
+//
+//    }
+//  return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+ *****
+ * *
+ * *
+ * *
+ *****
+
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    for(i=1;i<=5;i++)
+//    {
+//        for(j=1;j<=5;j++)
+//        {
+//            if(i==1 || i==5)
+//                printf("*");
+//
+//            else if (j==1 || j==3)
+//
+//                printf("*");
+//             else
+//                    printf(" ");
+//        }
+//        printf("\n");
+//    }
+//  return 0;
+//}
+//=============================================================================================================================================
+/**
+
+* * * * *
+* *   * *
+*   *   *
+* *   * *
+* * * * *
+
+
+ */
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//
+//    for(i=1; i<=5; i++)
+//    {
+//        for(j=1; j<=5; j++)
+//        {
+//           if(i==1 || i==5)
+//           {
+//               printf("* ");
+//           }
+//           else if(j==1 || j==5)
+//           {
+//               printf("* ");
+//           }
+//           else if(i==j || j==6-i )
+//           {
+//               printf("* ");
+//           }
+//
+//            else
+//                printf("  ");
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+//}
+//=============================================================================================================================================
+/**
+
+        * * * * *
+      * * * * *
+    * * * * *
+  * * * * *
+* * * * *
+
+
+*/
+
+//#include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    for(i=1;i<=5;i++)
+//    {
+//        for(j=1;j<=5-i;j++)
+//        {
+//               printf("  ");
+//
+//        }
+//        for(j=1;j<=5;j++)
+//    {
+//        printf("* ");
+//    }
+//             printf("\n");
+//
+//    }
+//
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+      * * * * *
+     *       *
+    *       *
+   *       *
+  * * * * *
+
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<=5-i;j++)
+//        {
+//            printf(" ");
+//        }
+//
+//        for(j=0;j<5;j++)
+//        {
+//             if(i==0 || i==4)
+//                printf("* ");
+//
+//            else if(j==0 || j==4)
+//                printf("* ");
+//            else
+//                printf("  ");
+//
+//        }
+//        printf("\n");
+//
+//    }
+//return 0;
+//
+//
+//}
+//=============================================================================================================================================
+/**
+
+ * * * * *
+   * * * * *
+     * * * * *
+       * * * * *
+         * * * * *
+
+*/
+
+// #include<stdio.h>
+//int main()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<=i;j++)
+//        {
+//            printf("  ");
+//        }
+//        for(j=0;j<5;j++)
+//        {
+//            printf("* ");
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+
+//}
+//=============================================================================================================================================
+/**
+
+ *****
+  *   *
+   *   *
+    *   *
+     *****
+
+*/
+
+// #include<stdio.h>
+//int main()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<=i;j++)
+//        {
+//            printf(" ");
+//        }
+//        for(j=0;j<5;j++)
+//        {
+//            if(i==0 || i==4 || j==0 || j==4)
+//                printf("*");
+//            else
+//                printf(" ");
+//        }
+//        printf("\n");
+//    }
+// return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+*
+**
+***
+****
+*****
+
+*/
+
+//#include<stdio.h>
+//int main()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<=i;j++)
+//        {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//  return 0;
+//}
+//=============================================================================================================================================
+/**
+
+*
+**
+* *
+*  *
+*****
+
+*/
+
+// #include<stdio.h>
+// int main()
+// {
+//     int i,j;
+//
+//     for(i=0;i<5;i++)
+//     {
+//         for(j=0;j<=i;j++)
+//         {
+//             if((i==2 || i==3) && (j==1) || (i==3 && j==2))
+//                  printf(" ");
+//             else
+//                printf("*");
+//         }
+//         printf("\n");
+//     }
+//    return 0;
+// }
+//=============================================================================================================================================
+/**
+
+
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+
+
+*/
+
+// #include<stdio.h>
+//int main()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//          if(j<4-i)
+//          {
+//              printf(" ");
+//          }
+//          else
+//              printf("* ");  /// Because of lengthy (ladder logic ) space is applied
+//        }
+//
+//        printf("\n");
+//    }
+//
+//  return 0;
+//}
+//=============================================================================================================================================
+/**
+
+    *
+   * *
+  *   *
+ *     *
+* * * * *
+
+
+*/
+
+// #include<stdio.h>
+// int main()
+// {
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<4-i)
+//                printf(" ");
+//
+//            else if(j<5-i)
+//            {
+//                printf("* ");
+//            }
+//            else if(i==4 || j==4)
+//            {
+//                printf("* ");
+//            }
+//            else
+//                printf("  ");
+//        }
+//        printf("\n");
+//
+//    }
+// return 0;
+//
+// }
+//=============================================================================================================================================
+/**
+
+*****
+****   } without space
+***
+**
+*
+
+* * * * *
+* * * *
+* * *       }  with space
+* *
+*
+
+
+
+*/
+// #include<stdio.h>
+// int main()
+//{
+//  int i,j;
+//
+//  for(i=0;i<5;i++)
+//  {
+//      for(j=0;j<5-i;j++)
+//      {
+//          printf("* ");
+//      }
+//      printf("\n");
+//  }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+* * * * *
+*     *
+*   *
+* *
+*
+
+*/
+
+//#include<stdio.h>
+//int main()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5-i;j++)
+//        {
+//            if((i==1 || i==2) && (j==1) ||(i==1 && j==2))
+//            {
+//                printf("  ");
+//            }else
+//            {
+//                printf("* ");
+//            }
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+//}
+//=============================================================================================================================================
+/**
+
+ *****
+  ****
+   ***
+    **
+     *
+     without space
+
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
+     with space
+*/
+
+// #include<stdio.h>
+// int main()
+//{
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<i)
+//                printf("  ");
+//            else
+//                printf("* ");
+//        }
+//        printf("\n");
+//    }
+//
+// return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+* * * * *
+  *     *
+    *   *
+      * *
+        *
+*/
+
+// #include<stdio.h>
+// int main()
+//{
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<i)
+//            printf("  ");
+//
+//            else if((i==1 || i==2) && (j==3) || (i==1 && j==2))
+//                printf("  ");
+//
+//            else
+//                printf("* ");
+//
+//        }
+//        printf("\n");
+//    }
+//
+// return 0;
+//
+//}
+//=============================================================================================================================================
+
+
+//
+//        *
+//       ***
+//      *****
+//     *******
+//    *********
+
+
+// #include<stdio.h>
+// int main()
+//{
+//    int i,j;
+//    for(i=0;i<4;i++)
+//    {
+//        for(j=0;j<7;j++)
+//        {
+//            if((i==0 && j<6) || (i==1 && j<4) || (i==2 && j<2))
+//            {
+//                printf(" ");
+//            }
+//            else
+//                printf("*");
+//        }
+//
+//        printf("\n");
+//    }
+//  return 0;
+//}
+
+///*************************** ANOTHER WAY *************************************
+
+
+//#include<stdio.h>
+// int main()
+//{
+//    int i,j;
+//    for(i=0;i<4;i++)
+//    {
+//        for(j=0;j<7;j++)
+//        {
+//            if(j<6-(i+i))
+//            {
+//                printf(" ");
+//            }
+//            else
+//                printf("*");
+//        }
+//
+//        printf("\n");
+//    }
+//  return 0;
+//}
+//=============================================================================================================================================
+/**
+
+       *
+     *   *
+   *       *
+ * * * * * * *
+
+
+*/
+
+// #include<stdio.h>
+// int main()
+//{
+//    int i,j;
+//    for(i=0;i<4;i++)
+//    {
+//        for(j=0;j<7;j++)
+//        {
+//            if(j<6-(i+i))
+//            {
+//                printf(" ");
+//            }
+//            else if ((i==1 && j==5) || (i==2 && (j>2 && j<6)))
+//                printf("  ");
+//
+//            else
+//                printf(" *");
+//        }
+//
+//        printf("\n");
+//    }
+//  return 0;
+//}
+//=============================================================================================================================================
+/**
+
+*********
+ *******
+  *****
+   ***
+    *
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//   int i,j;
+//   for(i=0;i<5;i++)
+//   {
+//       for(j=0;j<10;j++)
+//       {
+//           if(j<i&&(i>0))
+//            printf(" ");
+//
+//            else if(j<9-i)
+//                printf("*");
+//
+//            else
+//                 printf(" ");
+//       }
+//
+//       printf("\n");
+//   }
+// return 0;
+// }
+//=============================================================================================================================================
+/**
+
+
+*********
+ *-----*
+  *---*     }  without space
+   *-*
+    *
+
+* * * * * * * * *
+  *           *
+    *       *     }  with space
+      *   *
+        *
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//   int i,j;
+//   for(i=0;i<5;i++)
+//   {
+//       for(j=0;j<10;j++)
+//       {
+//           if(j<i&&(i>0))
+//            printf("  ");
+//
+//            else if( (i==1 && (j>1 && j<7)) ||(i==2 &&(j>2 && j<6)) || (i==3 && j==4))
+//                printf("  ");
+//
+//             else if(j<9-i)
+//                 printf("* ");
+//
+//
+//            else
+//                printf(" ");
+//       }
+//
+//       printf("\n");
+//   }
+// return 0;
+// }
+//=============================================================================================================================================
+/**
+
+*
+**
+***
+****
+*****  }  without space
+****
+***
+**
+*
+
+*
+* *
+* * *
+* * * *
+* * * * *  } with space
+* * * *
+* * *
+* *
+*
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    for(i=0;i<9;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<=i && i<5)
+//
+//                 printf("* ");
+//
+//            else if(j<9-i && i>4)
+//
+//                printf("* ");
+//
+//             else
+//                    printf(" ");
+//        }
+//
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+    *
+  ***
+*****     } without space
+  ***
+    *
+
+
+     *
+   * * *
+ * * * * *  } with space
+   * * *
+     *
+*/
+// #include<stdio.h>
+// int main ()
+// {
+//     int i,j;
+//     for(i=0;i<5;i++)
+//     {
+//         for(j=0;j<5;j++)
+//         {
+//             if(j<4-(i+i))
+//
+//                 printf(" ");
+//
+//            else if( (i==3 && j<2) || (i==4 && j<4)  && (i>2) )
+//                printf(" ");
+//
+//                else
+//                    printf(" *");
+//         }
+//         printf("\n");
+//     }
+// return 0;
+// }
+
+//=============================================================================================================================================
+/**
+
+    *
+   **
+  ***   } without star space
+ ****
+*****
+
+
+     *
+    * *
+   * * *    } with star space
+  * * * *
+ * * * * *
+
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<4-i)
+//
+//                printf(" ");
+//
+//             else
+//
+//                printf(" *");
+//        }
+//        printf("\n");
+//
+//    }
+// return 0;
+//
+// }
+//=============================================================================================================================================
+/**
+
+      *
+    ***
+  *****
+*******  } without star space
+  *****
+    ***
+      *
+
+       *
+     * * *
+   * * * * *
+ * * * * * * * } with star space
+   * * * * *
+     * * *
+       *
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     int i,j;
+//     for(i=0;i<7;i++)
+//     {
+//         for(j=0;j<7;j++)
+//         {
+//             if(j<6-(i+i))
+//
+//                 printf(" ");
+//
+//            else if( (i==4 && j<2) || (i==5 && j<4)  || (i==6 && j<6) && (i>3) )
+//                printf(" ");
+//
+//                else
+//                    printf(" *");
+//         }
+//         printf("\n");
+//     }
+// return 0;
+// }
+//=============================================================================================================================================
+/**
+
+
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     int i,j;
+//     for(i=0;i<10;i++)
+//     {
+//         for(j=0;j<10;j++)
+//         {
+//             if(j<5-i)
+//
+//                printf("*");
+//
+//             else if (j>4+i)
+//
+//                    printf("*");
+//
+//              else if(j<=i-5)
+//                    printf("*");
+//
+//              else if( j>13-i )
+//                   printf("*");
+//
+//              else
+//                   printf(" ");
+//
+//         }
+//         printf("\n");
+//     }
+// return 0;
+// }
+//=============================================================================================================================================
+/**
+
+
+*****
+ ****
+  ***
+   **
+    *
+   **
+  ***
+ ****
+*****
+
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//
+//{
+//    int i,j;
+//
+//    for(i=0;i<9;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j>=i)
+//                printf("*");
+//
+//          else if(j>7-i)
+//                    printf("*");
+//                else
+//                    printf(" ");
+//        }
+//        printf("\n");
+//    }
+//
+//return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+*****
+****
+***
+**
+*
+**
+***
+****
+*****
+
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    for(i=0;i<9;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<5-i)
+//            {
+//                printf("*");
+//            }
+//            else if(j<i-3)
+//            {
+//
+//                printf("*");
+//            }
+//
+//        }
+//
+//        printf("\n");
+//    }
+//
+// return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+
+   ****
+  ***
+ **
+*
+ **
+  ***
+   ****
+
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//
+//{
+//    int i,j;
+//    for(i=0;i<7;i++)
+//    {
+//        for(j=0;j<7;j++)
+//        {
+//            if(j>2-i && j<7-2*i)
+//            {
+//                printf("*");
+//            }
+//            else if (j>i-4 && j<2*i-5 )
+//
+//                printf("*");
+//
+//            else
+//                    printf(" ");
+//
+//        }
+//
+//        printf("\n");
+//    }
+//
+// return 0;
+//
+// }
+//=============================================================================================================================================
+/**
+
+  *
+  *
+  *
+  *
+** *******
+  *
+  *
+  *
+  *
+  *
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//    for(i=0; i<10; i++)
+//    {
+//        for(j=0; j<10; j++)
+//        {
+//            if((j==2 && i!=4) || (i==4 && j!=2))
+//            {
+//                printf("*");
+//            }
+//            else
+//                printf(" ");
+//        }
+//        printf("\n");
+//    }
+//
+//return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+     *
+     *
+     *
+     *
+ * * * * * * * * * *
+     *
+     *
+     *
+     *
+     *
+
+*/
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//    for(i=0;i<10;i++)
+//    {
+//        for(j=0;j<10;j++)
+//        {
+//            if((j==2 && i<10) || (i==4 && j<10) )
+//                printf(" *");
+//            else
+//                printf("  ");
+//        }
+//        printf("\n");
+//    }
+// return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+
+*       *
+ *     *
+  *   *
+   * *
+    *
+   * *
+  *   *
+ *     *
+*       *
+
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     int i,j;
+//     for(i=0; i<9; i++)
+//     {
+//        for(j=0;j<9;j++)
+//
+//         {
+//             if((i==j)|| (j==8-i))
+//            printf("*");
+//             else
+//            printf(" ");
+//         }
+//
+//        printf("\n");
+//     }
+//return 0;
+// }
+//=============================================================================================================================================
+/**
+
+* * *
+*   *
+*   *
+*   *
+* * *
+*   *
+*   *
+*   *
+* * *
+
+*/
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    for(i=0;i<9;i++)
+//    {
+//        for(j=0;j<3;j++)
+//        {
+//            if((i>0 && i<4) &&(j==1) || (i>4 && i<8) && (j==1))
+//                printf("  ");
+//            else
+//                printf("* ");
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+
+   ****   ****
+  ****** ******
+ ***************
+*****************
+ ***************
+  *************
+   ***********
+    *********
+     *******
+      *****
+       ***
+        *
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     int i,j;
+//     for(i=0;i<13;i++)
+//     {
+//         for(j=0;j<19;j++)
+//         {
+//             if(j<3-i || (i==0 && (j>6 && j<10)) || (i==1 &&j==8 ) || (j>i+13))
+//             {
+//                 printf(" ");
+//             }
+//             else if(j<i-3)
+//             {
+//                 printf(" ");
+//             }
+//             else if(j<20-i)
+//                printf("*");
+//
+//                else
+//                    printf(" ");
+//         }
+//
+//         printf("\n");
+//     }
+// }
+//=============================================================================================================================================
+/***************************************** CHARACTER PETTERNS *****************************************/
+/**
+
+ AAAAA
+ BBBBB
+ CCCCC
+ DDDDD
+
+ */
+
+// #include<stdio.h>
+// int main ()
+// {
+//    char i='A' , j='A';
+//    for(i='A';i<'E';i++)
+//    {
+//        for(j='A';j<='E';j++)
+//        {
+//            printf("%c",i);
+//        }
+//      printf("\n");
+//    }
+//
+// return 0;
+// }
+
+/**************  ANOTHER WAY  ******************/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<4;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            printf("%c",ch);
+//        }
+//
+//         printf("\n");
+//         ch++;
+//    }
+// return 0;
+//
+//}
+//=============================================================================================================================================
+/**
+ABCD
+ABCD
+ABCD
+ABCD
+ABCD
+
+*/
+// #include<stdio.h>
+// int main ()
+//{
+//  char i='A',j='A' ;
+//  for(i='A';i<='E';i++)
+//  {
+//      for(j='A';j<'E';j++)
+//      {
+//          printf("%c",j);
+//      }
+//      printf("\n");
+//  }
+//return 0;
+//
+//}
+/***************** ANOTHER WAY *****************/
+// #include<stdio.h>
+// int main ()
+//
+//{
+// char ch='A';
+// int i,j;
+// for(i=0;i<5;i++)
+// {
+//     ch='A';
+//     for(j=0;j<4;j++)
+//     {
+//         printf("%c",ch);
+//         ch++;
+//     }
+//     printf("\n");
+// }
+//
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A
+AB
+ABC
+ABCD
+ABCDE
+
+*/
+// #include<stdio.h>
+// int main ()
+//{
+//    char i='A',j='A';
+//    for(i='A';i<'E';i++)
+//    {
+//        for(j='A';j<=i;j++)
+//        {
+//            printf("%c",j);
+//        }
+//       printf("\n");
+//    }
+//
+//return 0;
+//}
+/**************** ANOTHER WAY *****************/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//    for(i=0;i<5;i++)
+//    {
+//        ch='A';
+//        for(j=0;j<=i;j++)
+//        {
+//            printf("%c",ch);
+//            ch++;
+//        }
+//        printf("\n");
+//    }
+//
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+E
+ED
+EDC
+EDCB
+EDCBA
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char i='A', j='A';
+//
+//    for(i='E';i>='A';i--)
+//    {
+//        for(j='E';j>=i;j--)
+//        {
+//            printf("%c",j);
+//        }
+//        printf("\n");
+//    }
+//
+//return 0;
+//}
+/***************** ANOTHER WAY ****************/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='E';
+//    int i,j;
+//    for(i=5;i>0;i--)
+//    {
+//        ch='E';
+//        for(j=5;j>=i;j--)
+//        {
+//            printf("%c",ch);
+//            ch--;
+//        }
+//        printf("\n");
+//    }
+//
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+E
+DE
+CDE
+BCDE
+ABCDE
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//  char ch='E';
+//  int i,j;
+//  for(i=0;i<5;i++)
+//  {
+//      ch='A';
+//      for(j=0;j<5;j++)
+//      {
+//          if(j<4-i)
+//             ch++;
+//             else
+//              printf("%c",ch++);
+//      }
+//      printf("\n");
+//  }
+//
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A
+BA
+CBA
+DCBA
+EDCBA
+
+
+*/
+
+//  #include<stdio.h>
+// int main ()
+//{
+//  char ch='E';
+//  int i,j;
+//  for(i=0;i<5;i++)
+//  {
+//      ch='E';
+//      for(j=0;j<5;j++)
+//      {
+//          if(j<4-i)
+//             ch--;
+//             else
+//              printf("%c",ch--);
+//      }
+//      printf("\n");
+//  }
+//
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+ABCDE
+ABCD
+ABC
+AB
+A
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     int i,j;
+//     char ch='A';
+//
+//     for(i=0;i<5;i++)
+//     {
+//         ch='A';
+//         for(j=0;j<5;j++)
+//         {
+//             if(j<5-i)
+//             {
+//                 printf("%c",ch);
+//                 ch++;
+//             }
+//         }
+//         printf("\n");
+//     }
+// return 0;
+// }//=============================================================================================================================================
+/**
+
+A B C D E
+B C D E
+C D E
+D E
+E
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    char ch='A';
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='A'+i;
+//
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<5-i)
+//
+//                printf("%c ",ch);
+//                ch++;
+//        }
+//        printf("\n");
+//
+//     }
+//
+//return 0;
+//
+//}
+// }//=============================================================================================================================================
+/**
+
+E D C B A
+E D C B
+E D C
+E D
+E
+
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    char ch='E';
+//
+//    for(i=0;i<5;i++)
+//    {
+//         ch='E';
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<5-i)
+//            {
+//                printf("%c ",ch);
+//                ch--;
+//            }
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+// }//=============================================================================================================================================
+/**
+
+A
+B B
+C C C
+D D D D
+E E E E E
+
+*/
+
+//  #include<stdio.h>
+//  int main ()
+//{
+//    char i='A',j='A';
+//
+//    for(i='A';i<='E';i++)
+//    {
+//        for(j='A';j<=i;j++)
+//        {
+//            printf("%c ",i);
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+// }
+//=============================================================================================================================================
+/**
+
+E
+D D
+C C C
+B B B B
+A A A A A
+
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//    char ch='E';
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<=i;j++)
+//        {
+//            printf("%c ",ch);
+//        }
+//        ch--;
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+E E E E E
+D D D D
+C C C
+B B
+A
+
+*/
+//
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    char ch='E';
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<5-i)
+//            {
+//                printf("%c ",ch);
+//            }
+//        }
+//        ch--;
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A A A A A
+B B B B
+C C C
+D D
+E
+
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<5-i;j++)
+//        {
+//            printf("%c ",ch);
+//        }
+//        ch++;
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A
+B C
+D E F
+G H I J
+K L M N O
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<=i;j++)
+//        {
+//            printf("%c ",ch++);
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A
+A B C
+A B C D E
+A B C D E F G
+A B C D E F G H I
+
+*/
+
+//  #include<stdio.h>
+//  int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//         ch='A';
+//        for(j=0;j<9;j++)
+//        {
+//            if(j<=i+i)
+//            {
+//                printf("%c ",ch++);
+//            }
+//        }
+//      printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+ABCDEEDCBA
+ABCD**DCBA
+ABC****CBA
+AB******BA
+A********A
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     int i,j;
+//     char ch='A';
+//
+//     for(i=0;i<5;i++)
+//     {
+//         ch='A';
+//         for(j=0;j<10;j++)
+//         {
+//             if(j<5-i)
+//             {
+//               printf("%c",ch++);
+//             }
+//             else if(j>4+i)
+//             {
+//                ch--;
+//               printf("%c",ch);
+//             }
+//             else
+//             {
+//                 printf("*");
+//             }
+//         }
+//         printf("\n");
+//
+//     }
+//
+//return 0;
+// }
+//=============================================================================================================================================
+/**
+
+    A
+  B C D
+E F G H I
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    char ch='A';
+//
+//    for(i=0;i<3;i++)
+//    {
+//      for(j=0;j<5;j++)
+//        {
+//          if(j>3-(i+i))
+//          {
+//              printf("%c ",ch++);
+//          }
+//          else
+//            printf(" ");
+//        }
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+EDCB*
+EDC*A
+ED*BA
+E*CBA
+*DCBA
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='E';
+//    int i,j;
+//
+//      for(i=0;i<5;i++)
+//      {
+//          ch='E';
+//          for(j=0;j<5;j++)
+//          {
+//             if(j<4-i)
+//             {
+//                 printf("%c",ch--);
+//             }
+//             else if(j>4-i)
+//             {
+//                 ch--;
+//                 printf("%c",ch);
+//             }
+//             else
+//                printf("*");
+//          }
+//          printf("\n");
+//      }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+A
+ABA
+ABCBA
+ABCDCBA
+ABCDEDCBA
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='A';
+//        for(j=0;j<9;j++)
+//        {
+//            if(j<=i+i)
+//            {
+//                if(j<=i)
+//                {
+//                    printf("%c",ch++);
+//                }
+//                else
+//                {
+//                    ch--;
+//                    printf("%c",ch-1);
+//                }
+//            }
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A        A
+AB      BA
+ABC    CBA
+ABCD  DCBA
+ABCDEEDCBA
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='A';
+//        for(j=0;j<10;j++)
+//        {
+//            if(j<=i)
+//            {
+//                printf("%c",ch++);
+//            }
+//         else if(j>=9-i)
+//            {
+//                ch--;
+//                printf("%c",ch);
+//            }
+//            else
+//            {
+//                printf(" ");
+//            }
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+    A
+   BA
+  CBA
+ DCBA
+EDCBA
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='F';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='F';
+//        for(j=0;j<5;j++)
+//        {
+//            ch--;
+//            if(j>3-i)
+//            {
+//                printf("%c",ch);
+//            }
+//            else
+//            {
+//                printf(" ");
+//            }
+//        }
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A
+B*B
+C*C*C
+D*D*D*D
+E*E*E*E*E
+D*D*D*D
+C*C*C
+B*B
+A
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A',bh='D';
+//    int i,j;
+//
+//    for(i=0;i<9;i++)
+//    {
+//        for(j=0;j<9;j++)
+//        {
+//            if(j<=(i+i) && i<5)
+//            {
+//                if(j%2==0)
+//                {
+//                    printf("%c",ch);
+//                }
+//                else
+//                {
+//                    printf("*");
+//                }
+//            }
+//        }
+//        if(i<5)
+//        ch++;
+//
+//        for(j=0;j<9;j++)
+//        {
+//            if(j<17-(i+i) && i>4)
+//            {
+//                if(j%2==0)
+//                {
+//                    printf("%c",bh);
+//                }
+//                else
+//                {
+//                    printf("*");
+//                }
+//            }
+//        }
+//        if(i>4)
+//        bh--;
+//
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+        A
+      B C
+    D E F
+  G H I J
+K L M N O
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     char ch='A';
+//     int i,j;
+//
+//     for(i=0; i<5; i++)
+//     {
+//         for(j=0; j<5; j++)
+//         {
+//             if(j>3-i)
+//                  printf(" %c",ch++);
+//             else
+//                  printf("  ");
+//         }
+//         printf("\n");
+//     }
+// return 0;
+// }
+//=============================================================================================================================================
+/**
+
+        E
+      E D
+    E D C
+  E D C B
+E D C B A
+
+*/
+
+//  #include<stdio.h>
+//  int main ()
+//{
+//    char ch='E';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='E';
+//        for(j=0;j<5;j++)
+//        {
+//            if(j>3-i)
+//            {
+//                printf(" %c",ch--);
+//            }
+//            else
+//            {
+//                printf("  ");
+//            }
+//        }
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A
+BAB
+CBABC
+DCBABCD
+EDCBABCDE
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='E',bh='B';
+//    int i,j;
+//
+//    for(i=0; i<5; i++)
+//    {
+//        ch='E';bh='B';
+//        for(j=0; j<9; j++)
+//        {
+//           if(j<=(i+i))
+//           {
+//               if(j<=i)
+//                {
+//                printf("%c",ch-4+i);
+//                ch--;
+//                }
+//
+//            else if(j>i)
+//               {
+//
+//               printf("%c",bh++);
+//               }
+//
+//           }
+//        }
+//        ch++;
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+
+A B C D E
+F G H I
+J K L
+M N
+O
+
+*/
+
+//  #include<stdio.h>
+//  int main ()
+//  {
+//      char ch='A';
+//      int i,j;
+//
+//      for(i=0;i<5;i++)
+//      {
+//          for(j=0;j<5-i;j++)
+//          {
+//              printf(" %c",ch++);
+//          }
+//          printf("\n");
+//      }
+//return 0;
+//  }
+//=============================================================================================================================================
+/**
+
+ A B C D E
+ B C D E A
+ C D E B A
+ D E C B A
+ E D C B A
+*/
+
+//  #include<stdio.h>
+//  int main ()
+// {
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='A'+i;
+//        for(j=0;j<5;j++)
+//        {
+//           if(j<5-i)
+//           {
+//               printf(" %c",ch++);
+//           }
+//           else if(j>4-i)
+//           {
+//               printf(" %c",ch-(6-i));
+//               ch--;
+//
+//           }
+//
+//        }
+//        printf("\n");
+//    }
+// return 0;
+// }
+//=============================================================================================================================================
+/**
+    A
+   A B
+  A B C
+ A B C D
+A B C D E
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     char ch='A';
+//     int i,j;
+//
+//     for(i=0;i<5;i++)
+//     {
+//         ch='A';
+//         for(j=0;j<5;j++)
+//         {
+//             if(j>3-i)
+//             {
+//                 printf(" %c",ch++);
+//             }
+//             else
+//             {
+//                 printf(" ");
+//             }
+//         }
+//         printf("\n");
+//     }
+// return 0;
+// }
+//=============================================================================================================================================
+/**
+
+E E E E E E E E E
+E D D D D D D D E
+E D C C C C C D E
+E D C B B B C D E
+E D C B A B C D E
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<9;j++)
+//        {
+//            if( i==0 || j==0 || j==8)
+//                printf(" E");
+//
+//            else if(i==1 || j==1 || j==7)
+//                printf(" D");
+//
+//            else if(i==2 || j==2 || j==6)
+//                printf(" C");
+//
+//            else if(i==4 && j==4)
+//                printf(" A");
+//
+//              else
+//                printf(" B");
+//        }
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/**
+E E E E E E E E E
+E D D D D D D D E
+E D C C C C C D E
+E D C B B B C D E
+E D C B A B C D E
+E D C B B B C D E
+E D C C C C C D E
+E D D D D D D D E
+E E E E E E E E E
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    for(i=0;i<9;i++)
+//    {
+//        for(j=0;j<9;j++)
+//        {
+//            if((i==0 || i==8) || (j==0 || j==8))
+//                printf(" E");
+//
+//            else if((i==1 || i==7) || (j==1 || j==7))
+//                printf(" D");
+//
+//            else if((i==2 || i==6) || (j==2 || j==6))
+//                printf(" C");
+//
+//            else if(i==4 && j==4)
+//                printf(" A");
+//
+//            else
+//                printf(" B");
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+
+ABCDE
+BABCD
+CBABC
+DCBAB
+EDCBA
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char bh,ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='A';bh='E';
+//        for(j=0;j<5;j++)
+//        {
+//            if(j>=i)
+//            {
+//                printf("%c",ch++);
+//            }
+//            else
+//            {
+//                printf("%c",bh-(4-i));
+//                bh--;
+//            }
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+/************  ANOTHER WAY  ****************/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch;
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='E';
+//        for(j=0;j<5;j++)
+//        {
+//            if(j<=i)
+//            {
+//                printf("%c",ch-(4-i));
+//                ch--;
+//            }
+//            else
+//            {
+//                printf("%c",ch-(2-i));
+//                ch++;
+//            }
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+A       A
+ B     B
+  C   C
+   D D
+    E
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<9;j++)
+//        {
+//            if(j==i || j==8-i)
+//            {
+//                printf("%c",ch);
+//            }
+//
+//            else
+//                printf(" ");
+//        }
+//        ch++;
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/** A
+   ABA
+  ABCBA
+ ABCDCBA
+ABCDEDCBA
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        ch='A';
+//        for(j=0;j<9;j++)
+//        {
+//          if(j<4-i || j>4+i)
+//          {
+//              printf(" ");
+//          }
+//          else if(j<5)
+//          {
+//              printf("%c",ch++);
+//          }
+//          else
+//          {
+//              printf("%c",ch-2);
+//              ch--;
+//          }
+//
+//        }
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+    A
+   B B
+  C   C
+ D     D
+E       E
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i=0;i<5;i++)
+//    {
+//        for(j=0;j<9;j++)
+//        {
+//            if(j==4-i || j==4+i)
+//            {
+//                printf("%c",ch);
+//            }
+//            else
+//            {
+//                printf(" ");
+//            }
+//        }
+//        ch++;
+//        printf("\n");
+//    }
+//return 0;
+//}
+//=============================================================================================================================================
+/**
+    A
+   B B
+  C   C
+ D     D
+E       E
+ D     D
+  C   C
+   B B
+    A
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    char ch='A';
+//    int i,j;
+//
+//    for(i==0;i<9;i++)
+//    {
+//        for(j=0;j<9;j++)
+//        {
+//            if(j==4-i || j==4+i)
+//            {
+//                printf("%c",ch);
+//            }
+//            else if(i>4 && (j==i-4 || j==12-i))
+//            {
+//                printf("%c",ch-2);
+//            }
+//            else
+//            {
+//                printf(" ");
+//            }
+//        }
+//
+//      if(i<5)
+//     {
+//            ch++;
+//     }
+//     else
+//     {
+//         ch--;
+//     }
+//        printf("\n");
+//    }
+// return 0;
+//}
+//=============================================================================================================================================
+/*****************************************  NUMERIC PATTERNS  ************************************/
+
+/**
+
+11111
+22222
+33333
+44444
+55555
+
+*/
+
+//#include<stdio.h>
+//int main ()
+//{
+//    int i,j;
+//
+//    i=1;
+//    while(i<=5)
+//    {
+//        j=0;
+//        while(j<5)
+//        {
+//            printf("%d",i);
+//       j++;
+//        }
+//        printf("\n");
+//   i++;
+//    }
+//return 0;
+//}
+//====================================================================================================================================
+/**
+
+ 11111
+ 11111
+ 11111
+ 11111
+ 11111
+
+*/
+
+// #include<stdio.h>
+// int main ()
+// {
+//     int i,j;
+//
+//   i=0;
+//   while(i<5)
+//   {
+//       j=0;
+//       while(j<5)
+//       {
+//           printf("1");
+//    j++;
+//       }
+//       printf("\n");
+//  i++;
+//   }
+//
+// return 0;
+// }
+//====================================================================================================================================
+/**
+
+ 11111
+ 00000
+ 11111
+ 00000
+ 11111
+
+*/
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    i=0;
+//    while(i<5)
+//    {
+//        j=0;
+//
+//        while(j<5)
+//        {
+//            if(i%2==0)
+//            {
+//                printf("1");
+//            }
+//            else
+//            {
+//                printf("0");
+//            }
+//
+//       j++;
+//        }
+//           printf("\n");
+//   i++;
+//    }
+//
+// return 0;
+//
+//}
+//====================================================================================================================================
+/**
+
+ 01010
+ 01010
+ 01010
+ 01010
+ 01010
+
+*/
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    i=0;
+//    while(i<5)
+//    {
+//        j=0;
+//        while(j<5)
+//        {
+//            if(j%2!=0)
+//            {
+//                printf("1");
+//            }
+//            else
+//            {
+//                printf("0");
+//            }
+//        j++;
+//        }
+//        printf("\n");
+//   i++;
+//    }
+//return 0;
+//}
+//====================================================================================================================================
+/**
+
+ 11111
+ 10001
+ 10001
+ 10001
+ 11111
+
+*/
+
+// #include<stdio.h>
+// int main ()
+//  {
+//      int i,j;
+//
+//      i=0;
+//      while(i<5)
+//      {
+//          j=0;
+//          while(j<5)
+//          {
+//            if(i==0 || j==0 || i==4 || j==4)
+//            {
+//                printf("1");
+//            }
+//            else
+//            {
+//                printf("0");
+//            }
+//
+//        j++;
+//          }
+//               printf("\n");
+//      i++;
+//
+//      }
+// return 0;
+//
+//  }
+//====================================================================================================================================
+/**
+
+ 11111
+ 11111
+ 11011
+ 11111
+ 11111
+
+*/
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//    i=0;
+//    while(i<5)
+//    {
+//        j=0;
+//
+//        while(j<5)
+//        {
+//            if(i==2 && j==2)
+//            {
+//                printf("0");
+//            }
+//            else
+//            {
+//                printf("1");
+//            }
+//       j++;
+//        }
+//          printf("\n");
+//   i++;
+//    }
+// return 0;
+//}
+//====================================================================================================================================
+/**
+
+ 10101
+ 01010
+ 10101
+ 01010
+ 10101
+
+*/
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    i=0;
+//    while(i<5)
+//    {
+//        j=0;
+//        while(j<5)
+//        {
+//            if((j+i)%2==0)
+//            {
+//                printf("1");
+//            }
+//            else
+//            {
+//                printf("0");
+//            }
+//       j++;
+//        }
+//        printf("\n");
+//   i++;
+//    }
+//}
+//====================================================================================================================================
+/**
+11011
+11011
+00000
+11011
+11011
+*/
+//  #include<stdio.h>
+//  int main ()
+//{
+//    int i,j;
+//
+//    i=0;
+//    while(i<5)
+//    {
+//        j=0;
+//        while(j<5)
+//        {
+//           if(i==2 || j==2)
+//            printf("0");
+//           else
+//            printf("1");
+//       j++;
+//        }
+//        printf("\n");
+//   i++;
+//    }
+//return 0;
+//}
+//====================================================================================================================================
+/**
+10001
+01010
+00100
+01010
+10001
+*/
+//  #include<stdio.h>
+//  int main ()
+//{
+//    int i,j;
+//
+//    i=0;
+//    while(i<5)
+//    {
+//        j=0;
+//        while(j<5)
+//        {
+//            if(j==i || j==4-i)
+//                printf("1");
+//            else
+//                printf("0");
+//       j++;
+//        }
+//        printf("\n");
+//    i++;
+//    }
+//return 0;
+//}
+//====================================================================================================================================
+/**
+01110
+10001
+10001
+10001
+01110
+
+*/
+
+//  #include<stdio.h>
+//  int main()
+//  {
+//      int i=0,j;
+//
+//      while(i<5)
+//        {
+//            j=0;
+//          while(j<5)
+//          {
+//              if((i==0 || i==4) && j>0 && j<4)
+//              {
+//                  printf("1");
+//              }
+//              else if((j==0 || j==4) &&(i>0 && i<4))
+//              {
+//                  printf("1");
+//              }
+//              else
+//                printf("0");
+//         j++;
+//          }
+//             printf("\n");
+//       i++;
+//        }
+//
+//return 0;
+//  }
+//====================================================================================================================================
+/**
+11111
+22222
+33333
+44444
+55555
+*/
+
+// #include<stdio.h>
+// int main ()
+//{
+//    int i,j;
+//
+//    i=1;
+//    do
+//    {
+//         j=0;
+//       do
+//       {
+//          printf("%d",i);
+//      j++;
+//       }while(j<5);
+//
+//       printf("\n");
+//
+//   i++;
+//    }while(i<6);
+//
+//return 0;
+//}
+//====================================================================================================================================
+/**
+12345
+12345
+12345
+12345
+12345
+*/
+// #include<stdio.h>
+// int main()
+//{
+//    int i,j;
+//
+//    i=0;
+//    while(i<5)
+//    {
+//        j=1;
+//        while(j<6)
+//        {
+//            printf("%d",j);
+//       j++;
+//        }
+//
+//        printf("\n");
+//
+//   i++;
+//    }
+//return 0;
+//}
+//====================================================================================================================================
+/**
+12345
+23456
+34567
+45678
+56789
+*/
+// #include<stdio.h>
+// int main()
+//{
+//    int i,j;
+//
+//    i=1;
+//    while(i<=5)
+//    {
+//        j=0;
+//        while(j<5)
+//        {
+//            printf("%d",i++);
+//       j++;
+//        }
+//
+//        i=i-5;
+//        printf("\n");
+//  i++;
+//    }
+//
+// return 0;
+//}
+//====================================================================================================================================
+/**
+1  2  3  4  5
+6  7  8  9  10
+11 12 13 14 15
+16 17 18 19 20
+21 22 23 24 25
+*/
+//  #include<stdio.h>
+//  int main()
+//{
+//    int i,j,cnt=1;
+//
+//    i=0;
+//    while(i<5)
+//    {
+//        j=0;
+//        while(j<5)
+//        {
+//            if(i<2)
+//          {
+//                printf("%3d",cnt++);
+//          }else
+//          {
+//               printf(" %d",cnt++);
+//          }
+//       j++;
+//        }
+//        printf("\n");
+//    i++;
+//    }
+//return 0;
+//}
+//====================================================================================================================================
+/**
+55555
+54444
+54333
+54322
+54321
+*/
+
+// #include<stdio.h>
+// int main()
+//{
+//    int i,j;
+//
+//    i=0;
+//    while(i<5)
+//    {
+//        j=0;
+//        while(j<5)
+//        {
+//            if((i==0 && j<5) || (j==0 && i<5))
+//                printf("5");
+//
+//            else if((i==1 && j>0) || (j==1 && i>0))
+//                printf("4");
+//
+//            else if((i==2 && j>1) || (j==2 && i>1))
+//                printf("3");
+//
+//            else if(j==i)
+//                printf("1");
+//
+//            else
+//                printf("2");
+//       j++;
+//        }
+//        printf("\n");
+//   i++;
+//    }
+//return 0;
+//}
+//====================================================================================================================================
+/**
+12345
+23455
+34555
+45555
+55555
+*/
+
+// #include<stdio.h>
+// int main()
+// {
+//     int i,j,cnt=0;
+//
+//     i=1;
+//     while(i<=5)
+//     {
+//        cnt=cnt+i;
+//            j=0;
+//         while(j<5)
+//         {
+//             if(j<5-i)
+//             {
+//                 printf("%d",cnt++);
+//             }
+//             else
+//             {
+//                 printf("5");
+//             }
+//        j++;
+//         }
+//         printf("\n");
+//         cnt=cnt-cnt;
+//
+//
+//     i++;
+//     }
+// return 0;
+// }
+//====================================================================================================================================
+/**
+12345
+23451
+34521
+45321
+54321
+*/
+
+//  #include<stdio.h>
+//  int main()
+//{
+//    int i,j,cnt=0;
+//
+//    i=1;
+//    while(i<=5)
+//    {
+//        cnt=cnt+i;
+//        j=0;
+//        while(j<5)
+//        {
+//            if(j<=5-i)
+//            {
+//                printf("%d",cnt++);
+//            }
+//            else if(j>5-i)
+//
+//             {
+//                  cnt=6-(j+1);
+//
+//               printf("%d",cnt--);
+//             }
+//      j++;
+//        }
+//
+//        printf("\n");
+//     //  printf("\t cnt is %d",cnt);
+//
+//        cnt=cnt-cnt;
+//   i++;
+//    }
+//}
+//====================================================================================================================================
+/**
+12345
+21234
+32123
+43212
+54321
+*/
+
+//  #include<stdio.h>
+//  int main()
+//{
+//    int i,j,cnt=0;
+//
+//    i=1;
+//    while(i<=5)
+//    {
+//          cnt=cnt+i;
+//        j=0;
+//        while(j<5)
+//        {
+//           if(j<i)
+//           {
+//               printf("%d",cnt--);
+//           }
+//           else
+//           {
+//               cnt=cnt+2;
+//               printf("%d",cnt--);
+//           }
+//       j++;
+//        }
+//        cnt=cnt-cnt;
+//        printf("\n");
+//   i++;
+//    }
+// return 0;
+//
+//}
+//====================================================================================================================================
+
+
+//5 5 5 5 5 5 5 5 5
+//5 4 4 4 4 4 4 4 5
+//5 4 3 3 3 3 3 4 5
+//5 4 3 2 2 2 3 4 5
+//5 4 3 2 1 2 3 4 5
+//5 4 3 2 2 2 3 4 5
+//5 4 3 3 3 3 3 4 5
+//5 4 4 4 4 4 4 4 5
+//5 5 5 5 5 5 5 5 5
 
 
 
